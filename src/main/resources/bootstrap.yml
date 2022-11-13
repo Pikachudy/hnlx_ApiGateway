@@ -7,10 +7,14 @@ spring:
         server-addr: 106.54.160.145:8848
       config:
         server-addr: 106.54.160.145:8848
-        file-extension: json
+#        file-extension: json
         name: GatewayRouter
         group: DEFAULT_GROUP
         namespace: cb7dad07-217a-4b1b-a187-80def0cf1458
+        shared-configs:
+          - data-id: GatewayRedis
+            group: DEFAULT_GROUP
+
     loadbalancer:
       cache:
         enabled: false
